@@ -1,0 +1,86 @@
+<!--
+  로그인 페이지
+-->
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+textarea {
+  width: 50%;
+  height: 100px;
+}
+html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+</style>
+<body class="w3-theme-l5">
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="window.location.reload()"><i class="fa fa-bars"></i></a>
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>EncoreBook</a>
+  <a href="sign_up.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+    Sign Up
+  </a>
+  <a href="log_in.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+    Log In
+  </a>
+ </div>
+</div>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    
+    <!-- Middle Column -->
+    <div id="js_middle" class="w3-col m9">
+
+      <!-- 로그인 -->
+      <div id="make">
+        <div class="w3-row-padding">
+          <div class="w3-col m12">
+            <div class="w3-card w3-round w3-white">
+              <div class="w3-container w3-padding">
+                <h2 class="w3-opacity" style="margin: 20px;">Log In</h2>
+                <div class="insert" style="margin: 20px;">
+                  <!-- action : board, command : logIn, parameter : id, password -->
+                  <form type="logInForm" method="post" action="feed" onSubmit='return checkValid()'>
+                    <input type="hidden" name="command" value="login">
+
+                    <label>아이디&emsp;&emsp;&emsp;</label>
+                    <input required type="text" name="id" placeholder="id" class="w3-border w3-padding">
+                    <p></p>
+
+                    <label>비밀번호&emsp;&emsp;</label>
+                    <input required type="password" name="password" placeholder="password" class="w3-border w3-padding">
+                    <p></p>
+                
+                    <button type="submit" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Log In</button>   
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div>
+
+    <!-- End Middle Column -->
+    </div>
+  
+    </div>
+  </div>
+  
+<!-- End Page Container -->
+</div>
+<br>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</body>
+</html> 
